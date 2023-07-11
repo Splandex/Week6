@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3>Password Checker:</h3>
+<div class="jumbotron">
+    <p>Check below if your password is secure.</p>
+    <p>The following are the requirements for a secure password:</p>
+    <ul>
+        <li>Must have an upper case letter somewhere</li>
+        <li>Must have a lower case letter somewhere</li>
+        <li>Must have a number at the end</li>
+    </ul>
+    <form action="{{url_for('give_report')}}">
+        <label for="username">Username:</label>
+        <input type="text" name = "username">
+
+        <label for="password">Password:</label>
+        <input type="text" name = "password">
+
+        <input type="submit" value = "Check">
+    </form>
+</div>
+
+
+{% endblock %}
